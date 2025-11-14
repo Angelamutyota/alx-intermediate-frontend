@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid and Flexbox Layout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+            <style>
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="p-4">
+    <header class="bg-blue-500 text-white p-4">
+        <h1 class="text-3xl">Grid and Flexbox Layout</h1>
+    </header>
+
+    <main class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-4 min-h-screen">
+        <section class="lg:col-span-2 flex">
+            <div class="w-1/2 bg-red-200 p-4">Flexbox Item 1</div>
+            <div class="w-1/2 bg-red-400 p-4">Flexbox Item 2</div>
+        </section>
+        <aside class="bg-green-200 p-4">Sidebar</aside>
+    </main>
+
+     <section aria-label="Image gallery" class="mt-8">
+    <h2 class="text-2xl font-semibold mb-4">Image Gallery</h2>
+
+    <!-- Responsive grid: 1 column on small screens, 3 on md+ -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <!-- Each image is responsive, preserves aspect ratio, and covers the cell -->
+      <figure class="overflow-hidden rounded">
+        <img class="w-full h-48 object-cover" src="https://images.pexels.com/photos/4016579/pexels-photo-4016579.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Gallery image 1">
+        <figcaption class="text-sm mt-2">Image 1 caption</figcaption>
+      </figure>
+
+      <figure class="overflow-hidden rounded">
+        <img class="w-full h-48 object-cover" src="https://images.pexels.com/photos/4016579/pexels-photo-4016579.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Gallery image 2">
+        <figcaption class="text-sm mt-2">Image 2 caption</figcaption>
+      </figure>
+
+      <figure class="overflow-hidden rounded">
+        <img class="w-full h-48 object-cover" src="https://images.pexels.com/photos/4016579/pexels-photo-4016579.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Gallery image 3">
+        <figcaption class="text-sm mt-2">Image 3 caption</figcaption>
+      </figure>
+
+      <figure class="overflow-hidden rounded">
+        <img class="w-full h-48 object-cover" src="https://images.pexels.com/photos/4016579/pexels-photo-4016579.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Gallery image 4">
+        <figcaption class="text-sm mt-2">Image 4 caption</figcaption>
+      </figure>
+
+      <figure class="overflow-hidden rounded">
+        <img class="w-full h-48 object-cover" src="https://images.pexels.com/photos/4016579/pexels-photo-4016579.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Gallery image 5">
+        <figcaption class="text-sm mt-2">Image 5 caption</figcaption>
+      </figure>
+
+      <figure class="overflow-hidden rounded">
+        <img class="w-full h-48 object-cover" src="https://images.pexels.com/photos/4016579/pexels-photo-4016579.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Gallery image 6">
+        <figcaption class="text-sm mt-2">Image 6 caption</figcaption>
+      </figure>
+    </div>
+  </section>
+
+    <footer class="bg-gray-800 text-white p-4 mt-4">
+        <p>&copy; 2024 John Doe's Blog</p>
+    </footer>
+</body>
+</html>
